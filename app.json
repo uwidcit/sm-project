@@ -1,0 +1,27 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "SECRET_KEY": {
+      "generator": "secret"
+    },
+    "ENV": "staging",
+    "JWT_EXPIRATION_DELTA": "14",
+    "SQLALCHEMY_DATABASE_URI": "sqlite:///temp-database.db"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "sm-project",
+  "scripts": {
+  },
+  "stack": "heroku-20"
+}
